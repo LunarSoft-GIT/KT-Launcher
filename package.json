@@ -1,12 +1,12 @@
 {
-    "name": "conflictura",
-    "preductname": "Conflictura Launcher",
-    "version": "3.3.3",
-    "description": "Conflictura modded server launcher",
+    "name": "kauldeertopia-launcher",
+    "preductname": "KT Launcher",
+    "version": "ALPHA 0.0.1",
+    "description": "Kauldeertopia modded server launcher",
     "main": "src/app.js",
-    "author": "Riptiaz/Boulldogo/Vexato/Luuxis",
+    "author": "Kauldeertopia/Riptiaz/Boulldogo/Vexato/Luuxis",
     "env": "azuriom",
-    "settings": "https://conflictura.eu",
+    "settings": "https://kauldeertopia.com/",
     "scripts": {
         "start": "cross-env-shell NODE_ENV=dev electron .",
         "build": "node build.js --obf=true --build=platform",
@@ -37,6 +37,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Riptiaz/CentralCorp-Launcher.git"
+        "url": "git+https://github.com/LunarSoft-GIT/KT-Launcher"
     }
 }
