@@ -279,7 +279,9 @@ initAccount() {
         const modElement = document.createElement('div');
         modElement.innerHTML = `
             <div class="mods-container-empty">
-              <h2>⚠️ Les mods optionnels n'ont pas encore étés téléchargés. Veuillez lancer une première fois le jeu pour pouvoir les configurer, puis redémarrez le launcher. ⚠️<h2>
+              <h2>⚠️ Mods opcionales no descargados / Optional mods not downloaded.
+Inicia el juego una vez / Launch the game once,
+luego reinicia el launcher / then restart the launcher. ⚠️<h2>
             </div>`;
         modsListElement.appendChild(modElement);
     }

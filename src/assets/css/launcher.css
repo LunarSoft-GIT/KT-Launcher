@@ -12,7 +12,7 @@ body {
     padding: 0;
     user-select: none;
     background: linear-gradient(#00000066, #00000066),
-    url("../images/background/bg.png") black no-repeat center center;
+    url("../images/background/BG.mp4") black no-repeat center center;
     background-size: cover; /* Ajout de cette propriété */
 }
 

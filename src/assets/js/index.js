@@ -107,10 +107,10 @@ class Splash {
             else if (os == 'linux') latest = this.getLatestReleaseForOS('linux', '.appimage', latestRelease);
     
     
-            this.setStatus(`Mise à jour disponible !<br><div class="download-update">Télécharger</div>`);
+            this.setStatus(`Update available !<br><div class="download-update">Download</div>`);
             document.querySelector(".download-update").addEventListener("click", () => {
                 shell.openExternal(latest.browser_download_url);
-                return this.shutdown("Téléchargement en cours...");
+                return this.shutdown("Downloading...");
             });
         }
     
@@ -127,7 +127,7 @@ class Splash {
 
 
     startLauncher() {
-        this.setStatus(`Démarrage du launcher`);
+        this.setStatus(`Iniciando/starting`);
         ipcRenderer.send('main-window-open');
         ipcRenderer.send('update-window-close');
     }
