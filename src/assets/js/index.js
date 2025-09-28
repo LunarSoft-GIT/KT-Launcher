@@ -60,7 +60,7 @@ class Splash {
             });
     
             ipcRenderer.on('updateAvailable', () => {
-                this.setStatus(`¡Actualización disponible!`);
+                this.setStatus(`Actualización disponible !`);
                 if (os.platform() == 'win32') {
                     this.toggleProgress();
                     ipcRenderer.send('start-update');
@@ -121,7 +121,7 @@ class Splash {
                 this.startLauncher();
             }).catch(e => {
                 console.error(e);
-                return this.shutdown("No se detectó conexión a Internet,<br> Por favor, inténtelo de nuevo más tarde.");
+                return this.shutdown("No se detectó conexión a Internet.");
             })
         }
 
