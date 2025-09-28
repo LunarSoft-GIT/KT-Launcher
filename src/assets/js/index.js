@@ -53,14 +53,14 @@ class Splash {
     }
 
         async checkUpdate() {
-            this.setStatus(`Buscando actualizaciones...`);
+            this.setStatus(`Recherche de mise à jour...`);
     
             ipcRenderer.invoke('update-app').then().catch(err => {
-                return this.shutdown(`Error al buscar actualizaciones :<br>${err.message}`);
+                return this.shutdown(`erreur lors de la recherche de mise à jour :<br>${err.message}`);
             });
     
             ipcRenderer.on('updateAvailable', () => {
-                this.setStatus(`Actualización disponible !`);
+                this.setStatus(`Mise à jour disponible !`);
                 if (os.platform() == 'win32') {
                     this.toggleProgress();
                     ipcRenderer.send('start-update');
@@ -78,7 +78,7 @@ class Splash {
             })
     
             ipcRenderer.on('update-not-available', () => {
-                console.error("Actualización no disponible");
+                console.error("Mise à jour non disponible");
                 this.maintenanceCheck();
             })
         }
@@ -121,7 +121,7 @@ class Splash {
                 this.startLauncher();
             }).catch(e => {
                 console.error(e);
-                return this.shutdown("No se detectó conexión a Internet.");
+                return this.shutdown("Aucune connexion internet détectée,<br>veuillez réessayer ultérieurement.");
             })
         }
 
@@ -133,10 +133,10 @@ class Splash {
     }
 
     shutdown(text) {
-        this.setStatus(`${text}<br>Cerrando en 5 segundos`);
+        this.setStatus(`${text}<br>Arrêt dans 5s`);
         let i = 4;
         setInterval(() => {
-            this.setStatus(`${text}<br>Parando ${i--}s`);
+            this.setStatus(`${text}<br>Arrêt dans ${i--}s`);
             if (i < 0) ipcRenderer.send('update-window-close');
         }, 1000);
     }
