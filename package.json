@@ -1,7 +1,7 @@
 {
     "name": "kauldeertopia-launcher",
     "preductname": "KT Launcher",
-    "version": "0.0.7",
+    "version": "0.0.6",
     "description": "Kauldeertopia modded server launcher",
     "main": "src/app.js",
     "author": "Kauldeertopia/Riptiaz/Boulldogo/Vexato/Luuxis",
